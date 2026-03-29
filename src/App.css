@@ -1,8 +1,10 @@
+/* 全局樣式 */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #3b36cc;
   color: white;
@@ -11,6 +13,8 @@ body {
   justify-content: center;
   font-family: sans-serif;
 }
+
+/* TodoWrapper component 的樣式 */
 .wrapper {
   width: 450px;
   padding: 30px;
@@ -19,6 +23,8 @@ body {
   margin-top: 20px;
   text-align: center;
 }
+
+/* CreateForm component 的樣式 */
 .create-form {
   height: 40px;
   width: 100%;
@@ -26,6 +32,8 @@ body {
   border: 1px solid #3b36cc;
   display: flex;
 }
+
+/* CreateForm componenet 裡的子元素 input 和 button 的樣式 */
 .create-form > input {
   outline: none;
   border: none;
@@ -43,6 +51,8 @@ body {
   height: 100%;
   cursor: pointer;
 }
+
+/* Todo component 的樣式 */
 .todo {
   background-color: #3b36cc;
   height: 40px;
@@ -53,7 +63,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Todo 裡 className=completed 要顯示的樣式 */
 .completed {
-  opacity: 0.4;
-  text-decoration: line-through 3px black;
+  opacity: 0.4; /* 使完成的待辦事項變得半透明，表示它已經完成 */
+  text-decoration: line-through 3px black; /* 添加刪除線，線條厚度為 3px，顏色為黑色 */
 }
