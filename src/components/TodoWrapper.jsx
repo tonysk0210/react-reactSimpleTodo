@@ -58,6 +58,8 @@ function TodoWrapper() {
     );
   };
 
+  // 函數 toggleIsEditing 用於切換待辦事項的編輯狀態，接受 id 作為參數，通過 map 函數遍歷 todos 狀態，
+  // 找到匹配 ID 的待辦事項，並切換其 isEditing 屬性的值。
   const toggleIsEditing = (id) => {
     setTodos(
       todos.map((todo) => {
@@ -65,7 +67,10 @@ function TodoWrapper() {
       }),
     );
   };
-  const editTodo = (id, newContent) => {
+
+  // 函數 updateTodo 用於更新待辦事項的內容，接受 id 和 newContent 作為參數，通過 map 函數遍歷 todos 狀態，
+  // 找到匹配 ID 的待辦事項，並更新其 content 屬性的值，同時將 isEditing 屬性設置為 false，以結束編輯狀態。
+  const updateTodo = (id, newContent) => {
     setTodos(
       todos.map((todo) => {
         return todo.id === id
@@ -92,7 +97,7 @@ function TodoWrapper() {
             deleteTodo={deleteTodo}
             toggleCompleted={toggleCompleted}
             toggleIsEditing={toggleIsEditing}
-            editTodo={editTodo}
+            updateTodo={updateTodo}
           />
         );
       })}

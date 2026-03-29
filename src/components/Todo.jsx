@@ -8,10 +8,10 @@ function Todo({
   deleteTodo,
   toggleCompleted,
   toggleIsEditing,
-  editTodo,
+  updateTodo,
 }) {
   return todo.isEditing ? (
-    <EditForm todo={todo} editTodo={editTodo} />
+    <EditForm todo={todo} updateTodo={updateTodo} /> // 如果 todo 的 isEditing 屬性為 true，則渲染 EditForm 組件，並傳遞當前的 todo 和 editTodo 函數作為 props。
   ) : (
     // 根據 todo 的 isCompleted 屬性來決定是否添加 "completed" 類名，以便應用相應的樣式。
     <div className={`todo ${todo.isCompleted ? "completed" : ""}`}>
@@ -29,7 +29,7 @@ function Todo({
         <MdEdit
           style={{ cursor: "pointer" }}
           onClick={() => {
-            toggleIsEditing(todo.id);
+            toggleIsEditing(todo.id); // 呼叫 toggleIsEditing 函數，並傳遞當前待辦事項的 ID，以切換編輯狀態。
           }}
         />
         {/* 點擊 MdDelete 圖標時，調用 deleteTodo 函數並傳遞當前待辦事項的 ID，以刪除該待辦事項。 */}
