@@ -2,10 +2,10 @@ import { useState } from "react";
 import CreateForm from "./CreateForm";
 import Todo from "./Todo";
 
-// TodoWrapper 是整個待辦事項應用的主要組件，負責管理待辦事項的狀態和邏輯。
+// TodoWrapper 是整個待辦事項應用的主要組件
 function TodoWrapper() {
   // 建立一個名為 todos 的狀態，初始值是一個包含兩個待辦事項的數組。
-  // 每個待辦事項是一個對象，包含 content、id、isCompleted 和 isEditing 屬性。
+  // 每個待辦事項是一個對象，包含 content、id、isCompleted 和 isEditing 4個屬性。
   const [todos, setTodos] = useState([
     {
       content: "打掃廁所",
