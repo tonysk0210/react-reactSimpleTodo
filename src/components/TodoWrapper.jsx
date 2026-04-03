@@ -2,7 +2,7 @@ import { useState } from "react";
 import CreateForm from "./CreateForm";
 import Todo from "./Todo";
 
-// TodoWrapper 是整個待辦事項應用的主要組件
+// TodoWrapper component 是整個待辦事項應用的主要組件
 function TodoWrapper() {
   // 建立一個名為 todos 的狀態，初始值是一個包含兩個待辦事項的數組。
   // 每個待辦事項是一個對象，包含 content、id、isCompleted 和 isEditing 4個屬性。
@@ -82,7 +82,7 @@ function TodoWrapper() {
 
   // 在 JSX 中渲染待辦事項列表，並傳遞相應的函數作為 props 給 Todo 組件。
   return (
-    <div className="wrapper">
+    <div className="todo-wrapper">
       <h1>待辦事項</h1>
       {/* 加入CreateForm component。把 addTodo 函數作為 props 傳遞給它 */}
       <CreateForm addTodo={addTodo} />

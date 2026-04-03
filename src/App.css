@@ -1,4 +1,4 @@
-/* 全局樣式 */
+/* * 代表所有元素-全局樣式 */
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +15,7 @@ body {
 }
 
 /* TodoWrapper component 的樣式 */
-.wrapper {
+.todo-wrapper {
   width: 450px;
   padding: 30px;
   background-color: #1a1a40;

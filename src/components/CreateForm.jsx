@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// CreateForm 是一個用於創建新待辦事項的表單組件，負責處理用戶輸入和提交事件。
+// CreateForm component 負責渲染一個表單，讓用戶可以輸入新的待辦事項內容，並在提交表單時調用 addTodo 函數來添加新的待辦事項。
 function CreateForm({ addTodo }) {
   const [content, setContent] = useState(""); // content 代表用戶輸入的待辦事項內容。
 
@@ -17,12 +17,15 @@ function CreateForm({ addTodo }) {
       <input
         type="text"
         placeholder="輸入待辦事項"
-        value={content}
+        value={content} // input 元素的 value 屬性綁定到 content 狀態，這樣當 content 更新時，輸入框的內容也會更新。
         onChange={(e) => {
-          setContent(e.target.value); // 當用戶在輸入框中輸入內容時，更新 content 的狀態。
+          setContent(e.target.value);
+          // 當用戶在輸入框中輸入內容時，更新 content 的狀態。 e.target.value 是輸入框中的當前值，通過 setContent 更新 content 狀態，從而實現輸入框的雙向綁定。
         }}
       />
-      <button type="submit">加入</button>
+      {/* input 元素用於讓用戶輸入待辦事項內容，當用戶在輸入框中輸入內容時，更新 content 的狀態。 */}
+      <button type="submit">加入</button>{" "}
+      {/* submit 按鈕用於提交表單，當用戶點擊按鈕時，觸發 handleSubmit 函數。 */}
     </form>
   );
 }
